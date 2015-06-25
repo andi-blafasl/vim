@@ -1,0 +1,18 @@
+[submodule "bundle/eclipse"]
+	path = bundle/eclipse
+	url = https://github.com/vim-scripts/eclipse.vim
+[submodule "bundle/jellybeans"]
+	path = bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/vim-kolor"]
+	path = bundle/vim-kolor
+	url = https://github.com/zeis/vim-kolor
+[submodule "bundle/xoria256"]
+	path = bundle/xoria256
+	url = https://github.com/vim-scripts/xoria256.vim
