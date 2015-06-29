@@ -54,3 +54,5 @@ For screen to display vim with 256-colors in console you need to set the TERM en
     ```
 
 2. log off and on again
+
+Further Information see [stackoverflow question 6787734](http://stackoverflow.com/questions/6787734/strange-behavior-of-vim-color-inside-screen-with-256-colors)
