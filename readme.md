@@ -43,3 +43,14 @@ This is my personal version contolled VIM configuration
     ```
     
 ## Keep submodules up to date
+
+## Adjustment for Screen
+
+For screen to display vim with 256-colors in console you need to set the TERM environment variable in you shell.
+
+1. Enter the following to your .bashrc:
+    ```sh
+    export TERM=xterm-256color
+    ```
+
+2. log off and on again
