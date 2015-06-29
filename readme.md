@@ -50,6 +50,7 @@ For screen to display vim with 256-colors in console you need to set the TERM en
 
 1. Enter the following to your .bashrc:
     ```sh
+    # enable 256color mode in console for screen and vim
     export TERM=xterm-256color
     ```
 
