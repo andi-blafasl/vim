@@ -53,7 +53,7 @@ git submodule add https://github.com/StanAngeloff/php.vim.git php.vim
 Commit your changes and push them to your remote
 
     git add -A
-    git commit -am "Submodule php.vim added"
+    git commit -m "Submodule php.vim added"
     git push
 
 ## Keep submodules up to date
