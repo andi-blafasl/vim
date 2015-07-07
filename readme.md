@@ -51,13 +51,13 @@ git submodule foreach --recursive git checkout master
 git submodule foreach --recursive git pull
 ```
 
-The first line will make sure that all submodules are on the master branch. All the latest Kirby releases will be on the master branch. With the second line, the latest version of each submodule will be pulled.
+The first line will make sure that all submodules are on the master branch. With the second line, the latest version of each submodule will be pulled.
 
 Now all you need to do is make sure that the latest versions are being added to your project repository:
 
 ```sh
 git add -A
-git commit -am "Kirby Update"
+git commit -am "Submodule Update"
 git push
 ```
 
