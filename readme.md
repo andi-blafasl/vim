@@ -44,6 +44,23 @@ This is my personal version contolled VIM configuration
     
 ## Keep submodules up to date
 
+Updating those submodules is super easy.
+
+```sh
+git submodule foreach --recursive git checkout master
+git submodule foreach --recursive git pull
+```
+
+The first line will make sure that all submodules are on the master branch. All the latest Kirby releases will be on the master branch. With the second line, the latest version of each submodule will be pulled.
+
+Now all you need to do is make sure that the latest versions are being added to your project repository:
+
+```sh
+git add -A
+git commit -am "Kirby Update"
+git push
+```
+
 ## Adjustment for Screen
 
 For screen to display vim with 256-colors in console you need to set the TERM environment variable in you shell.
