@@ -16,3 +16,6 @@
 [submodule "bundle/xoria256"]
 	path = bundle/xoria256
 	url = https://github.com/vim-scripts/xoria256.vim
+[submodule "bundle/php.vim"]
+	path = bundle/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git

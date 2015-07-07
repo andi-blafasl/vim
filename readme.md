@@ -42,6 +42,20 @@ This is my personal version contolled VIM configuration
     ln -s .vim/.virmc .vimrc
     ```
     
+## Add submodules
+
+Add the Submodule to your git repository
+```sh
+cd ~/.vim/bundle
+git submodule add https://github.com/StanAngeloff/php.vim.git php.vim
+```
+
+Commit your changes and push them to your remote
+
+    git add -A
+    git commit -am "Submodule php.vim added"
+    git push
+
 ## Keep submodules up to date
 
 Updating those submodules is super easy.
