@@ -35,7 +35,7 @@ This is my personal version contolled VIM configuration
     
     Linux:
     ```sh
-    ln -s .vim/.virmc .vimrc
+    ln -s .vim/.vimrc .vimrc
     ```
     
 ## Add submodules
