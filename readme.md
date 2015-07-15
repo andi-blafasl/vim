@@ -67,7 +67,7 @@ Now all you need to do is make sure that the latest versions are being added to 
 
 ```sh
 git add -A
-git commit -am "Submodule Update"
+git commit -m "Submodule xy Update"
 git push
 ```
 
