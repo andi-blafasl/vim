@@ -1,8 +1,9 @@
-" Custom VIM Settings
+" VIM Settings
 " Andreas H. - 25.06.2015
 
 " ===== Runtime Stuff =====
 set nocompatible
+set cpoptions+=$
 
 " disable beeping
 set noerrorbells
