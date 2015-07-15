@@ -22,13 +22,9 @@ This is my personal version contolled VIM configuration
     
 2. check out the git repository
 
-        git clone https://github.com/andi-blafasl/vim.git .vim
+        git clone --recursive https://github.com/andi-blafasl/vim.git .vim
 
-3. update submodules
-
-        git submodule update --init --recursive
-
-4. create symlinks in home directory
+3. create symlinks in home directory
 
     Windows:
     ```bat
@@ -39,7 +35,7 @@ This is my personal version contolled VIM configuration
     
     Linux:
     ```sh
-    ln -s .vim/.virmc .vimrc
+    ln -s .vim/.vimrc .vimrc
     ```
     
 ## Add submodules
