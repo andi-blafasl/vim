@@ -445,10 +445,6 @@ if &listchars ==# 'eol:$'
     endif
 endif
 
-
-" bind NERDTree to F1 (we don't need help)
-nnoremap <f1> :NERDTreeToggle<cr>
-
 " bind TagList to F2
 nnoremap <f2> :TlistToggle<cr>
 
@@ -503,6 +499,15 @@ function! s:unite_settings()
     " Use jj to exit insert mode (we remapped Esc so this is needed)
     imap <buffer> jj <Plug>(unite_insert_leave)
 endfunc
+
+" =============================================================================
+" NERDTree Custom Settings
+" =============================================================================
+" bind NERDTree to F1 (we don't need help)
+nnoremap <f1> :NERDTreeToggle<cr>
+
+" show hidden files
+let NERDTreeShowHidden=1
 
 "==============================================================================
 " For some reason I can't seem to be able to map <nop> to the arrow keys
