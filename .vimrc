@@ -509,6 +509,9 @@ nnoremap <f1> :NERDTreeToggle<cr>
 " show hidden files
 let NERDTreeShowHidden=1
 
+" close VIM if NERDTree is the last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "==============================================================================
 " For some reason I can't seem to be able to map <nop> to the arrow keys
 " (probably due to some plugin) so instead we just re-center screen on
