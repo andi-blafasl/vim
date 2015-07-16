@@ -2,6 +2,19 @@
 
 This is my personal version contolled VIM configuration
 
+## How to fetch updates including Submodules
+
+1. Pull the updated repository
+    ```sh
+    cd ~/.vim
+    git pull
+    ```
+
+2. Init and update submodules
+    ```sh
+    git submodule update --init
+    ```
+
 ## How to Set up
 
 1. remove old configuration
