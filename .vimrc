@@ -24,6 +24,17 @@ if v:version >= 703
     set cryptmethod=blowfish
 endif
 
+"default utf-8 Encoding für Files
+if has("multi_byte")
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+endif
+
 " ===== System Specific Settings =====
 
 if has('win32')
@@ -521,13 +532,3 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "inoremap <Left> <C-o>zz
 "inoremap <Right> <C-o>zz
 
-"default utf-8 Encoding für Files
-if has("multi_byte")
-  if &termencoding == ""
-    let &termencoding = &encoding
-  endif
-  set encoding=utf-8
-  setglobal fileencoding=utf-8
-  "setglobal bomb
-  set fileencodings=ucs-bom,utf-8,latin1
-endif
