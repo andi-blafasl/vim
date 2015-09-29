@@ -1,6 +1,12 @@
 " VIM Settings
 " Andreas H. - 25.06.2015
 
+" let vim edit a crontab successfully, no error
+" crontab: temp file must be edited in place
+" via comment on
+" http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
+au FileType crontab set nobackup nowritebackup
+
 " ===== Runtime Stuff =====
 set nocompatible
 set cpoptions+=$
