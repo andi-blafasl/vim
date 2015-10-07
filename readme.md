@@ -104,8 +104,12 @@ Further Information see [stackoverflow question 6787734](http://stackoverflow.co
     ```sh
     sudo apt-get install source-highlight
     ```
+    
 2. add the follown to your .bashrc:
     ```sh
-    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-    export LESS=' -R '
+    # add syntax-highlighting to less
+    if [ -x /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
+        export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+        export LESS=' -R '
+    fi
     ```
