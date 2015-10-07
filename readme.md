@@ -97,3 +97,15 @@ For screen to display vim with 256-colors in console you need to set the TERM en
 2. log off and on again
 
 Further Information see [stackoverflow question 6787734](http://stackoverflow.com/questions/6787734/strange-behavior-of-vim-color-inside-screen-with-256-colors)
+
+## Get Syntaxhighlighting for less
+
+1. install source-highlight
+    ```sh
+    sudo apt-get install source-highlight
+    ```
+2. add the follown to your .bashrc:
+    ```sh
+    export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+    export LESS=' -R '
+    ```
