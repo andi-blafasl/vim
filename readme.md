@@ -105,7 +105,7 @@ Further Information see [stackoverflow question 6787734](http://stackoverflow.co
     sudo apt-get install source-highlight
     ```
     
-2. add the follown to your .bashrc:
+2. add the following to your .bashrc:
     ```sh
     # add syntax-highlighting to less
     if [ -x /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
