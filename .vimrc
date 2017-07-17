@@ -95,8 +95,16 @@ endif
 
 " ===== UI Options =====
 
-" FONT SETTINGS for all platforms
-set guifont=Source_Code_Pro:h12:cANSI
+" FONT SETTINGS for all platforms depending on Hostname
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "XPS"
+    set guifont=Source_Code_Pro:h10:cANSI
+elseif hostname == "pooh"
+
+else
+    set guifont=Source_Code_Pro:h12:cANSI
+endif
+
 
 " remove unnecessary toolbars (why do they exist anyway?)
 if has('gui_running')
