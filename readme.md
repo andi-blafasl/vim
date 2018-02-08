@@ -87,11 +87,19 @@ git push
 ## Remove a submodule
 
 ```sh
-git submodule deinit path/to/module # ensure local config cleanup
-git rm path/to/module               # clean WD and .gitmodules
+git submodule deinit bundle/module # ensure local config cleanup
+git rm bundle/module               # clean WD and .gitmodules
 ```
 
 The first line will remove the submodule from your local config. With the second line, the submodule will be removed from your working directory and the .gitmodules file.
+
+Now all you need to do is make sure that the latest versions are being added to your project repository:
+
+```sh
+git add -A
+git commit -m "Submodule xy removed"
+git push
+```
 
 ## Adjustment for Screen
 
