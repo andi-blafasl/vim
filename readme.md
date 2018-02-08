@@ -101,6 +101,12 @@ git commit -m "Submodule xy removed"
 git push
 ```
 
+to cleanup the local cached repository of the removed submodule you have to
+
+```sh
+rm .git/modules/bundle/module
+```
+
 ## Adjustment for Screen
 
 For screen to display vim with 256-colors in console you need to set the TERM environment variable in you shell.
