@@ -84,6 +84,15 @@ git commit -m "Submodule xy Update"
 git push
 ```
 
+## Remove a submodule
+
+```sh
+git submodule deinit path/to/module # ensure local config cleanup
+git rm path/to/module               # clean WD and .gitmodules
+```
+
+The first line will remove the submodule from your local config. With the second line, the submodule will be removed from your working directory and the .gitmodules file.
+
 ## Adjustment for Screen
 
 For screen to display vim with 256-colors in console you need to set the TERM environment variable in you shell.
