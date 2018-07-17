@@ -193,7 +193,7 @@ xnoremap / /\v
 set hidden
 
 " Automatically save before commands like :next and :make
-set autowrite
+"set autowrite
 
 " buffer browsing with left/right arrows
 "nnoremap <Left> :bprev<CR>
@@ -318,7 +318,7 @@ set expandtab 		" actually, expand tabs into spaces
 
 set backspace=indent,eol,start
 
-au FocusLost * silent! :wa	" save when switching focus 
+"au FocusLost * silent! :wa	" save when switching focus 
 
 "============= Search & Matching ==============================================
 
