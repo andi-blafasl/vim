@@ -2,19 +2,6 @@
 
 This is my personal version contolled VIM configuration
 
-## How to fetch updates including Submodules
-
-1. Pull the updated repository
-    ```sh
-    cd ~/.vim
-    git pull
-    ```
-
-2. Init and update submodules
-    ```sh
-    git submodule update --init
-    ```
-
 ## How to Set up
 
 1. remove old configuration
@@ -50,7 +37,20 @@ This is my personal version contolled VIM configuration
     ```sh
     ln -s .vim/.vimrc .vimrc
     ```
-    
+
+## How to fetch updates including Submodules
+
+1. Pull the updated repository
+    ```sh
+    cd ~/.vim
+    git pull
+    ```
+
+2. Init and update submodules
+    ```sh
+    git submodule update --init --recursive
+    ```
+
 ## Add submodules
 
 Add the Submodule to your git repository
@@ -84,6 +84,29 @@ git commit -m "Submodule xy Update"
 git push
 ```
 
+## Remove a submodule
+
+```sh
+git submodule deinit bundle/module # ensure local config cleanup
+git rm bundle/module               # clean WD and .gitmodules
+```
+
+The first line will remove the submodule from your local config. With the second line, the submodule will be removed from your working directory and the .gitmodules file.
+
+Now all you need to do is make sure that the latest versions are being added to your project repository:
+
+```sh
+git add -A
+git commit -m "Submodule xy removed"
+git push
+```
+
+to cleanup the local cached repository of the removed submodule you have to
+
+```sh
+rm .git/modules/bundle/module
+```
+
 ## Adjustment for Screen
 
 For screen to display vim with 256-colors in console you need to set the TERM environment variable in you shell.
@@ -97,19 +120,3 @@ For screen to display vim with 256-colors in console you need to set the TERM en
 2. log off and on again
 
 Further Information see [stackoverflow question 6787734](http://stackoverflow.com/questions/6787734/strange-behavior-of-vim-color-inside-screen-with-256-colors)
-
-## Get Syntaxhighlighting for less
-
-1. install source-highlight
-    ```sh
-    sudo apt-get install source-highlight
-    ```
-    
-2. add the follown to your .bashrc:
-    ```sh
-    # add syntax-highlighting to less
-    if [ -x /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
-        export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-        export LESS=' -R '
-    fi
-    ```

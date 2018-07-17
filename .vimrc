@@ -80,9 +80,9 @@ else
           " solid underscore
           "let &t_SI .= "\<Esc>[4 q"
           " solid vertical bar
-          let &t_SI .= "\<Esc>[6 q"
+          "let &t_SI .= "\<Esc>[6 q"
           " solid block
-          let &t_EI .= "\<Esc>[2 q"
+          "let &t_EI .= "\<Esc>[2 q"
           " 1 or 0 -> blinking block
           " 3 -> blinking underscore
           " Recent versions of xterm (282 or above) also support
@@ -95,8 +95,16 @@ endif
 
 " ===== UI Options =====
 
-" FONT SETTINGS for all platforms
-set guifont=Source_Code_Pro:h12:cANSI
+" FONT SETTINGS for all platforms depending on Hostname
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "XPS"
+    set guifont=Source_Code_Pro:h10:cANSI
+elseif hostname == "pooh"
+
+else
+    set guifont=Source_Code_Pro:h12:cANSI
+endif
+
 
 " remove unnecessary toolbars (why do they exist anyway?)
 if has('gui_running')
